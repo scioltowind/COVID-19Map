@@ -18,7 +18,7 @@ from folium.features import DivIcon
 
 
 
-town_shp = gpd.read_file(r'mapdata\TOWN_MOI_1100415.shp', encoding = 'utf-8')
+town_shp = gpd.read_file(r'TOWN_MOI_1100415.shp', encoding = 'utf-8')
 
 Nantou_shp = town_shp[town_shp['COUNTYNAME'] == '南投縣']
 Nantou_CNT = pd.read_csv('Counts.csv', encoding = 'utf-8')
@@ -79,7 +79,6 @@ NIL = folium.features.GeoJson(
     style_function=style_function, 
     control=False,
     show = True,
-    # marker  =  foilum.Marker(['TOWNNAME']),
     tooltip=folium.features.GeoJsonTooltip(
         fields=['TOWNNAME',"COUNTS"],
         aliases=['鄉鎮名',"確診數"],
@@ -91,27 +90,3 @@ Nantou_map.add_child(NIL)
 
 Nantou_map.save("nantou_map.html")
 webbrowser.open_new_tab('nantou_map.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# for Town_Map in Nantou_Data.values:
-#     folium.GeoJson(
-#         Town_Map.to_json(), 
-#         name = 'geojson',
-#         popup = Town_Map['COUNTS'],
-#         ).add_to(Nantou_map)
-# Nantou_map.save("nantou_map.html")
-# Nantou_Data.plot(column = 'COUNTS')
