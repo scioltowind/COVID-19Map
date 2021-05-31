@@ -67,8 +67,6 @@ folium.Choropleth(
     legend_name="確診數",
     smooth_factor=0,
     Highlight= True,
-
-    # bins=[0, 20, 30, 40, 50, 60],
     show=False,
 ).add_to(Nantou_map)
 
