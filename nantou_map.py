@@ -86,5 +86,5 @@ NIL = folium.features.GeoJson(
     
 Nantou_map.add_child(NIL)
 
-Nantou_map.save("nantou_map.html")
+Nantou_map.save("COVID-19Map/nantou_map.html")
 
