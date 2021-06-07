@@ -87,4 +87,4 @@ NIL = folium.features.GeoJson(
 Nantou_map.add_child(NIL)
 
 Nantou_map.save("nantou_map.html")
-webbrowser.open_new_tab('nantou_map.html')
+
