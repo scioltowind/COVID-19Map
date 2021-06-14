@@ -77,4 +77,4 @@ if __name__  == "__main__":
     url  = 'https://data.cdc.gov.tw/download?resourceid=3c1e263d-16ec-4d70-b56c-21c9e2171fc7&dataurl=https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.csv'
     City_Name = "南投縣"
     Start_data = 20210501
-    Create_Data(url, City_Name, Start_data)
+    Create_Data(url, City_Name, Start_data) 
